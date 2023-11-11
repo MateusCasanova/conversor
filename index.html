@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saturn</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+    <link rel="icon" type="1/png" href="1.png">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Saturn Logo" id="logo">
+        <h1>Saturn</h1>
+        <div id="toggleTheme" style="position:fixed; top:10px; right:10px; cursor:pointer;"></div>
+    </header>    
+
+    <div class="content-wrapper"> 
+        <div class="converter">
+            <form id="currencyForm">
+                <div class="select-wrapper">
+                    <label for="fromCurrency" class="select-label">De</label>
+                    <div class="large-select-box"> 
+                        <select id="fromCurrency" style="width: 68%;"></select>
+                        <input type="number" id="amount" placeholder="0.00" style="text-align: right; font-family: Inter, sans-serif, bold; font-weight: bold;" autocomplete="off">
+                    </div>
+                </div>                
+                <div class="hover-group">
+                    <button type="button" id="switchButton" title="Inverter moedas">🠕🠗</button>
+                    <div class="line-separator"></div>
+                </div>
+                
+                <div class="select-wrapper">
+                    <label for="toCurrency" class="select-label">Para</label>
+                    <div class="large-select-box" style="background-color: #263446; display: flex; justify-content: space-between; align-items: center;">
+                        <select id="toCurrency"></select>
+                        <span id="convertedAmount" style="text-align: right;  font-family: Inter, sans-serif, bold; font-weight: bold; font-size: 1.2rem ;"></span>
+                    </div>
+                </div>
+
+                <button type="submit">Converter</button>
+            </form>
+        </div>
+        <div id="rates"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+
+</html>

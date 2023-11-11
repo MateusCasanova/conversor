@@ -1,0 +1,360 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+body {
+    background-color: #1c2936;
+    font-size: 1rem;
+    transition: background-color 0.5s;
+    margin: 0;
+    min-height: 100vh;
+    color: white; 
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    background-color: #121b23;
+    padding: 0.35rem; 
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#logo {
+    height: 40px;
+    margin-right: 0.1rem;
+    margin-left: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1rem;
+    font-family: Inter, sans-serif;
+    color: white;
+}
+
+
+
+
+.content-wrapper {
+    width: 80%; 
+    max-width: 1140px;
+    margin: auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+.converter {
+    background: #304256;
+    padding: 1.3rem; 
+    border-radius: 1rem; 
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);  
+    width: 34%;
+    transition: background-color 0.5s, box-shadow 0.5s;
+    display: block;
+    margin: auto; 
+}
+
+.currency-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.currency-group {
+    width: 100%;
+}
+
+.hover-group {
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 50px;
+}
+
+#switchButton {
+    background: #383838;
+    color: #898989;
+    border: 2px solid #19232d;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin: 1rem auto; 
+    padding: 0.5rem; 
+    width: auto; 
+    min-width: 2rem; 
+    height: auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: background 0.3s;
+    top: 50%;
+    position: absolute; 
+    z-index: 2; 
+    line-height: 1; 
+}
+
+
+.line-separator {
+    top: 50%;
+    height: 2px; 
+    background-color: #19232d; 
+    margin: 1rem 0;
+    width: 100%; 
+    position: absolute;
+    z-index: 1;
+    margin-bottom: 0;
+}
+
+
+.hover-group:hover #switchButton {
+    border-color: #c7f184;
+    color: #c7f184;
+    transition: 0.5s;
+}
+
+
+.select-label {
+    color: #83888d;
+    font-weight: bold;
+    font-family: Inter, sans-serif, bold;
+}
+.large-select-box {
+    height: 2.5rem;
+    padding: 1rem; 
+    background: #19232d; 
+    border-radius: 10px; 
+    justify-content: space-between; 
+    align-items: center;
+    position: relative;
+    display: flex;
+    margin-bottom: 20px;
+    border: 2px solid transparent;
+}
+
+.large-box-focus {
+    border: 1px solid #c7f184; 
+    box-shadow: 0 0 8px #c7f184;
+    transition: 0.5s;
+}
+
+
+select{
+    margin: 0.55rem 0;
+    padding: 0.8rem;
+    width: 40%;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.96rem;
+    font-family: Inter, sans-serif, bold;
+    font-weight: bold;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+    color: white;
+    background-color: #304256;  
+    text-align: left;
+}
+
+input {
+    margin: 0.55rem 0;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-family: Inter, sans-serif, bold;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+    background-color: #19232d;  
+    text-align: left;
+    color: white;
+}
+
+
+
+ button {
+    margin: 0.55rem 0;
+    padding: 1.4rem;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.96rem;
+    font-family: Inter, sans-serif, bold;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+    color: white;
+    background-color: #19232d;  
+    text-align: left;
+}
+
+input::placeholder{
+    color: #838383;
+    margin: 0.55rem 0;
+}
+input:focus, select:focus, button:focus {
+    border-color: #383838;
+    outline: none;
+}
+
+button {
+    background-color: #121d28;
+    color: #898989;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #090d11;
+}
+
+button:hover {
+    border-color: #c7f184; 
+    color: #c7f184;
+    transition: 0.5s;
+}
+
+
+body.light-mode {
+    background-color: #606972;
+    color: #000000;
+}
+
+.converter.light-mode {
+    background: #777f86;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1); 
+}
+
+input.light-mode, select.light-mode, button.light-mode {
+    border-color: #A0A0A0;
+}
+
+button.light-mode {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+button.light-mode:hover {
+    background-color: #C0C0C0;
+}
+
+#switchButton.light-mode:hover {
+    background: #A0A0A0;
+}
+
+#toggleTheme {
+    width: 30px; 
+    height: 30px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.5s; 
+}
+
+#toggleTheme.light-mode {
+    background-color: #383838; 
+}
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animated {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+
+#rates {
+    font-weight: bold;
+    font-family: Inter, sans-serif, bold;
+    background: #304256; 
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+    width: 35%; 
+    margin: 2rem auto; 
+    transition: background-color 0.5s, box-shadow 0.5s;
+    color: white; 
+}
+
+
+
+
+.rate-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    color: white;
+}
+
+.change-pct {
+    width: 50px;
+    text-align: right;
+    margin-right: 10px;
+}
+.separator {
+    height: 1px;
+    background-color: #19232d;
+    margin: 0.5rem 0;
+}
+
+
+.rate-line span {
+    color: inherit; 
+    font-size: inherit; 
+}
+
+.positive {
+    color: rgb(60, 178, 60) !important;
+}
+
+.negative {
+    color: rgb(144, 18, 18) !important;
+}
+
+@media (max-width: 1300px) {
+
+    .converter {
+        padding: 2rem;
+        width: 40%;
+    }
+
+    #rates {
+      
+        padding: 1rem;
+        width: 43%; 
+        margin: 2rem auto; 
+    }
+
+    
+    
+}
+
+
+@media (max-width: 900px) {
+
+    .converter {
+        padding: 1rem;
+        width: 90%;
+    }
+
+    #rates {
+      
+        padding: 1rem;
+        width: 90%; 
+        margin: 2rem auto;
+    }
+
+    
+    
+}
